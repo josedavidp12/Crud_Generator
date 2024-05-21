@@ -15,6 +15,6 @@ class Paquete extends Model
 
     public function camionero()
     {
-        return $this->hasMany(Camionero::class);
+        return $this->belongsTo(Camionero::class);
     }
 }

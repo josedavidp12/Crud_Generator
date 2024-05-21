@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('camion_camionero', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('camionero_id');
-            $table->foreign('camionero_id')->references('id')->on('camioneros')->onDelete('cascade');
             $table->unsignedBigInteger('camion_id');
-            $table->foreign('camion_id')->references('id')->on('camion')->onDelete('cascade');
+            $table->foreign('camionero_id')->references('id')->on('camioneros')->onDelete('cascade');
+            $table->foreign('camion_id')->references('id')->on('camions')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -11,15 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('camion', function (Blueprint $table) {
+        Schema::create('camions', function (Blueprint $table) {
             $table->id();
             $table->integer('potencia');
             $table->string('matricula')->unique();
             $table->string('modelo');
             $table->string('tipo');
             $table->timestamps();
-            $table->unsignedBigInteger('camionero_id');
-            $table->foreign('camionero_id')->references('id')->on('camioneros')->onDelete('cascade');
         });
     }
 
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('camion');
+        Schema::dropIfExists('camions');
     }
 };
