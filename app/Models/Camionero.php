@@ -37,7 +37,7 @@ class Camionero extends Model
         return $this->hasMany(Paquete::class);
     }
 
-    public function camiones()
+    public function camion()
     {
         return $this->belongsToMany(Camion::class);
     }
