@@ -59,7 +59,7 @@
                             <a class="nav-link" href="{{route('camionero.index')}}"> Camionero</a>
                         </li>
                         <li class=" nav-item">
-                            <a class="nav-link" href="{{route('alberto.index')}}"> Alberto</a>
+                            <a class="nav-link" href="{{route('producto.index')}}"> Producto</a>
                         </li>
 
                             <li class="nav-item dropdown">
