@@ -52,12 +52,7 @@
                         <li class=" nav-item">
                             <a class="nav-link" href="{{route('clientes.index')}}"> Clientes</a>
                         </li>
-                        <li class=" nav-item">
-                            <a class="nav-link" href="{{route('pedidos.index')}}"> Pedidos</a>
-                        </li>
-                        <li class=" nav-item">
-                            <a class="nav-link" href="{{route('camionero.index')}}"> Camionero</a>
-                        </li>
+
                         <li class=" nav-item">
                             <a class="nav-link" href="{{route('producto.index')}}"> Producto</a>
                         </li>
