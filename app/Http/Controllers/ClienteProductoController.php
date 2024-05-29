@@ -10,17 +10,18 @@ class ClienteProductoController extends Controller
 {
     public function asociar(){
 
-        $users = Cliente::all();
-        $roles = Producto::all();
+        $clientes = Cliente::all(['id', 'nombre']); // Asegúrate de incluir 'name'
+        $productos = Producto::all(['id', 'descripcion']); // Asegúrate de incluir 'name'
 
-        return view('cliente_producto.asociar',compact('cliente','producto'));
+        return view('cliente_producto.asociar',compact('clientes','productos'));
 
     }
 
     public function store(Request $request){
 
-        $user=Cliente::find($request->user_id);
-        $user->roles()->attach($request->role_id);
+        $cliente=Cliente::find($request->cliente_id);
+        $cliente->productos()->attach($request->producto_id);
+        return redirect()->route('producto.index')->with('success', 'Producto asociado correctamente.');
 
     }
 }

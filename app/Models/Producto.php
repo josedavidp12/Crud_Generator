@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Proveedor;
 use Illuminate\Database\Eloquent\Model;
 
 /**

@@ -22,8 +22,10 @@ class ClienteRequest extends FormRequest
     public function rules(): array
     {
         return [
-			'name' => 'required|string',
-			'email' => 'required|string',
+			'nombre' => 'required|string',
+			'apellido' => 'required|string',
+			'direccion' => 'required|string',
+			'codigo' => 'required|string',
         ];
     }
 }
